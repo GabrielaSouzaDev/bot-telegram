@@ -17,12 +17,11 @@ import requests
 import time
 
 # informações do telegram
-TOKEN = 'SEU_TOKEN'
-CHAT_ID = 'SEU_ID'
+TOKEN = 'SEU TOKEN DO BOT'
+CHAT_ID = 'SEU CHAT ID'
 
 # url do site
-url = "https://www.americanas.com.br/tv-43--tcl-full-hd-qled-43s5k-google-tv-2-hdmi-8296741/p"
-
+url = "https://www.americanas.com.br/cadeira-presidente-escritorio-giratoria-apoio-de-cabeca-fox-office-preta-46a--174100j5898vn118/p"
 # driver
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
