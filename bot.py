@@ -36,14 +36,15 @@ preco = driver.find_element(
     # By.CLASS_NAME -> seleciona classe estatica
 
 # exibir os resultados
-print(preco)
+if preco < 230.00: # condição para enviar a mensagem
+    print(preco)
 
-mensagem = f"preço encontrado: {preco}\n{url}"
+    mensagem = f"preço encontrado: {preco}\n{url}"
 
-requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage",
-    data={
-        "chat_id": CHAT_ID,
-        "text": mensagem
-    })
+    requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage",
+        data={
+            "chat_id": CHAT_ID,
+            "text": mensagem
+        })
 
 driver.quit()
