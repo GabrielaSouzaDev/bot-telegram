@@ -8,9 +8,9 @@ import requests
 import time
 
 # acesso do telegram
-TOKEN = ""
+TOKEN = "seu-token-aqui"
 
-CHAT_ID = ""
+CHAT_ID = "seu-id-aqui"
 
 # url's produtos
 produtos = [
