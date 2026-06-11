@@ -8,9 +8,9 @@ import requests
 import time
 
 # acesso do telegram
-TOKEN = "https://api.telegram.org/bot8313858074:AAH48LHPhbVcU9dUobQFULDJyIywYEFrUk4/getUpdates"
+TOKEN = ""
 
-CHAT_ID = "1919804153"
+CHAT_ID = ""
 
 # url's produtos
 produtos = [
