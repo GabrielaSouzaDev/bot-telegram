@@ -8,9 +8,9 @@ import requests
 import time
 
 # acesso do telegram
-TOKEN = "seu-token-aqui"
+TOKEN = "xxx:xxx"
 
-CHAT_ID = "seu-id-aqui"
+CHAT_ID = "xxxxxx"
 
 # url's produtos
 produtos = [
@@ -60,7 +60,6 @@ for produto in produtos:
             }
         )
         print(f"Status da mensagem: {resposta.status_code}")
-        print(f"Erro: {resposta.text}")
         print("Pesquisa realizada com sucesso!")
 
 # fechar aplicação
