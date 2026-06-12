@@ -4,8 +4,8 @@
 
 # Passos
 
-# Capturar a info
-# Só me notifique se chegar na minha condição
+# [x] Capturar a info
+# [x] Só me notifique se chegar na minha condição
 
 
 # importações
@@ -17,8 +17,8 @@ import requests
 import time
 
 # informações do telegram
-TOKEN = 'SEU TOKEN DO BOT'
-CHAT_ID = 'SEU CHAT ID'
+TOKEN = ":"
+CHAT_ID = ""
 
 # url do site
 url = "https://www.americanas.com.br/cadeira-presidente-escritorio-giratoria-apoio-de-cabeca-fox-office-preta-46a--174100j5898vn118/p"
@@ -36,15 +36,14 @@ preco = driver.find_element(
     # By.CLASS_NAME -> seleciona classe estatica
 
 # exibir os resultados
-if preco < 230.00: # condição para enviar a mensagem
-    print(preco)
+print(f"Preço do produto localizado com sucesso!!\n{preco}")
+mensagem = f"preço encontrado: {preco}\n{url}"
 
-    mensagem = f"preço encontrado: {preco}\n{url}"
-
-    requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage",
-        data={
-            "chat_id": CHAT_ID,
-            "text": mensagem
-        })
-
+requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage",
+    data={
+        "chat_id": CHAT_ID,
+        "text": mensagem
+    })
+    
+# fechar a aplicação   
 driver.quit()
